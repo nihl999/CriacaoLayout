@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desafio 1</title>
+    <link rel="stylesheet" href="Desafio1.css" />
+  </head>
+  <body>
+    <div id="container">
+      <header id="header">HEADER</header>
+      <div id="content">
+        <nav class="lateral-menu">MENU Esquerdo</nav>
+        <main>
+          CONTEÚDO
+          <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        </main>
+        <nav class="lateral-menu" id="right-menu">MENU Direito</nav>
+      </div>
+    </div>
+    <script>
+      let menus = document.querySelectorAll(".lateral-menu");
+      let main = document.querySelector("main");
+      menus.forEach((menu) => {
+        menu.style.height = main.offsetHeight / 2 + "px";
+      });
+    </script>
+  </body>
+</html>

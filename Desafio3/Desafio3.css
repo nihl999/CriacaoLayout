@@ -1,0 +1,132 @@
+* {
+  box-shadow: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  --salmon-pink: #ff9898ff;
+  --amber: #ffc101ff;
+  --tea-green: #ccfecdff;
+}
+
+body {
+  font-size: 1.5rem;
+  font-family: "Roboto", sans-serif;
+  background-color: rgb(240, 240, 240);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+main {
+  min-width: 60%;
+  max-width: 70%;
+  min-height: 80vh;
+  background: white;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100%;
+  padding: 15px;
+}
+
+#table-name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3rem;
+  font-size: 1.7rem;
+}
+#description-row {
+  background-color: var(--amber);
+  border: none;
+}
+#description-row .position-column {
+  background-color: white;
+  border: none;
+}
+#description-row div:not(:first-child) {
+  border-left: 2px solid #000000ff;
+  border-top: 2px solid #000000ff;
+  border-bottom: 2px solid #000000ff;
+  border-right: none;
+}
+#description-row div:last-child {
+  border-right: 2px solid #000000ff !important;
+}
+.table-row {
+  border: 3px solid #000000ff;
+  background: red;
+  display: grid;
+  grid-template-columns: repeat(11, minmax(0, 1fr));
+  grid-template-areas: "p-row n-row n-row f-row f-row s-row s-row g-row g-row a-row a-row";
+  height: 50px;
+  font-weight: 400;
+  font-size: 0.7em;
+}
+
+.table-row div:not(:last-child) {
+  border-right: 3px solid #000000ff;
+}
+
+.table-row + .table-row {
+  border-bottom: none;
+}
+.table-row:last-of-type {
+  border-bottom: 3px solid #000000ff;
+}
+
+.bold-font {
+  font-weight: 500;
+}
+
+.extra-bold-font {
+  font-weight: 700;
+}
+
+.aligned {
+  padding-top: 8px;
+  text-align: center;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.position-column {
+  grid-area: p-row;
+}
+
+.name-column {
+  grid-area: n-row;
+}
+
+.first-semester-column {
+  grid-area: f-row;
+}
+
+.second-semester-column {
+  grid-area: s-row;
+}
+
+.final-grade-column {
+  grid-area: g-row;
+}
+
+.attendace-column {
+  grid-area: a-row;
+}
+
+.approved {
+  background: var(--tea-green);
+}
+
+.reproved {
+  background: var(--salmon-pink);
+}
